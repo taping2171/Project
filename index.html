@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Info</title>
+
+    <script src="./js/fullpage.min.js"></script>
+    <link rel="stylesheet" href="./js/fullpage.min.css">
+
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <ul id="menu">
+        <li data-menuanchor="lunch" class="active"><a href="#lunch">급식</a></li>
+        <li data-menuanchor="temperature"><a href="#temperature">온도</a></li>
+        <li data-menuanchor="finedust"><a href="#finedust">미세먼지</a></li>
+    </ul>
+
+    <div id="full-page">
+        <div class="section s1">
+            <div class="section-cover1">
+                <div class="NOlunch">
+            <img src="./img/no1lunch.png" alt="범진첫끼" class="NO1">
+            <img src="./img/no2lunch.png" alt="범진첫끼" class="NO2">
+            <img src="./img/no3lunch.png" alt="범진첫끼" class="NO3">
+            <img src="./img/no4lunch.png" alt="범진첫끼" class="NO4">
+                </div>
+            <h2>급식</h2>
+            <p id="lunchInput"></p>
+        </div>
+        </div>
+        <div class="section s2">
+            <h2>온도</h2>
+            <p></p>
+        </div>
+        <div class="section s3">
+            <h2>미세먼지</h2>
+            <p></p>
+        </div>
+    </div>
+    <script>
+        new fullpage('#full-page', {
+            lisenceKey: 'asdfadf',
+            scrollingSpeed: 1000,
+            continuousVertical: true,
+            navigation: true,
+            anchors: ['lunch', 'temperature', 'finedust'],
+            navigationTooltips: ['급식', '온도', '미세먼지', '개발자정보'],
+            menu: '#menu'
+        })
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
